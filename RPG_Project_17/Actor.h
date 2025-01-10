@@ -3,6 +3,8 @@
 #include <vector>
 #include <iostream>
 
+using namespace std;
+
 class Actor
 {
 private:
@@ -12,7 +14,11 @@ private:
 	int MaxHP;//최대 체력
 public:
 	//멤버 함수
-	Actor();//생성자
+	Actor()//생성자
+	{
+
+	}
+
 	int Attack()
 	{
 		return AttackPower;
@@ -23,7 +29,7 @@ public:
 	}
 	bool isDead()
 	{
-		return hp > 0 ? false : true;
+		return HP > 0 ? false : true;
 	}
 	void printStatus()
 	{
