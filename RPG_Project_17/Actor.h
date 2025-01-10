@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
 
 class Actor
 {
@@ -12,8 +13,22 @@ private:
 public:
 	//멤버 함수
 	Actor();//생성자
-	int Attack();
-	void onHit(int inputAttackPower);
-	bool isDead(int inputHP);
-	void printStatus();
+	int Attack()
+	{
+		return AttackPower;
+	}
+	void onHit(int inputAttackPower)
+	{
+		HP -= inputAttackPower;
+	}
+	bool isDead()
+	{
+		return hp > 0 ? false : true;
+	}
+	void printStatus()
+	{
+		cout << "이름 : " << Name<<endl;
+		cout << "공격력 : " << AttackPower<<endl;
+		cout << "현재 체력 : " << HP<<endl;		
+	}
 };
